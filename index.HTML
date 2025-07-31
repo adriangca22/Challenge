@@ -11,20 +11,27 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="nav-container">
-            <div class="logo">
-                <img src="img/VRUME-white-with-red-dot.png" alt="VRUME Logo">
-            </div>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#advertisers">Advertisers</a></li>
-                    <li><a href="#publishers">Publishers</a></li>
-                    <li><a href="#case-studies">Case Studies</a></li>
-                    <li><a href="#contact">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
+ <div class="nav-container">
+  <div class="logo">
+    <img src="img/VRUME-white-with-red-dot.png" alt="VRUME Logo">
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <nav>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#advertisers">Advertisers</a></li>
+      <li><a href="#publishers">Publishers</a></li>
+      <li><a href="#case-studies">Case Studies</a></li>
+      <li><a href="#contact">Contact us</a></li>
+    </ul>
+  </nav>
+</div>
+
     </header>
 
     <!-- Hero Section -->
@@ -310,6 +317,14 @@
 
         // Auto-play (opcional)
         setInterval(nextSlide, 5000); // Cambia cada 5 segundos
+        // Hamburguesa móvil
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navMenu = document.getElementById('navMenu');
+
+hamburgerBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
     </script>
 </body>
 </html>
